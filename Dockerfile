@@ -11,7 +11,7 @@ RUN mvn clean package -DskipTests
 FROM openjdk:17.0.1-jdk-slim
 
 # Copy the JAR file from the build stage
-COPY --from=build /target/mentormate-server-0.0.1-SNAPSHOT.jar demo.jar
+COPY --from=build /target/HotelManagement-0.0.1-SNAPSHOT.jar demo.jar
 
 # Expose port 8080 for the application
 EXPOSE 8080
